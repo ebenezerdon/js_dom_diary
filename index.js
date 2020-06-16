@@ -1,5 +1,6 @@
 const entryTextbox = document.querySelector('.entry-textbox');
 const entriesSection = document.querySelector('#entries');
+const entriesNav = document.querySelector('.entries-nav');
 
 function addEntryToDom(event) {
   event.preventDefault();
@@ -9,6 +10,11 @@ function addEntryToDom(event) {
   entryDiv.innerText = entryTextbox.value;
   entryDiv.style.display = 'none';
   entriesSection.appendChild(entryDiv);
+
+  const displayEntryButton = document.createElement('button');
+  displayEntryButton.className = 'display-entry-button';
+  displayEntryButton.innerText = 1;
+  entriesNav.appendChild(displayEntryButton);
 }
 
 const entryForm = document.querySelector('#entryForm');
