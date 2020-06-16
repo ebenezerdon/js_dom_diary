@@ -17,6 +17,7 @@ function addEntryToDom(event) {
   displayEntryButton.innerText = count;
   entriesNav.appendChild(displayEntryButton);
 
+  entryTextbox.value = '';
   count++;
 }
 
