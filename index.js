@@ -18,6 +18,10 @@ function addEntryToDom(event) {
   entriesNav.appendChild(displayEntryButton);
 
   displayEntryButton.addEventListener('click', function() {
+    const allEntries = document.querySelectorAll('.single-entry');
+    for (let item of allEntries) {
+      item.style.display = 'none';
+    };
     entryDiv.style.display = 'block';
   })
 
