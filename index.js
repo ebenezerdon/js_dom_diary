@@ -7,6 +7,7 @@ function addEntryToDom(event) {
   const entryDiv = document.createElement('div');
   entryDiv.className = 'single-entry';
   entryDiv.innerText = entryTextbox.value;
+  entryDiv.style.display = 'none';
   entriesSection.appendChild(entryDiv);
 }
 
