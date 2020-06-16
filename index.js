@@ -2,6 +2,7 @@ const entryTextbox = document.querySelector('.entry-textbox');
 const entriesSection = document.querySelector('#entries');
 const entriesNav = document.querySelector('.entries-nav');
 
+let count = 1;
 function addEntryToDom(event) {
   event.preventDefault();
 
@@ -13,8 +14,10 @@ function addEntryToDom(event) {
 
   const displayEntryButton = document.createElement('button');
   displayEntryButton.className = 'display-entry-button';
-  displayEntryButton.innerText = 1;
+  displayEntryButton.innerText = count;
   entriesNav.appendChild(displayEntryButton);
+
+  count++;
 }
 
 const entryForm = document.querySelector('#entryForm');
